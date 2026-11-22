@@ -11,11 +11,13 @@ Khawla Banydomi, AI Instructor
 
 ## Student instructions
 
-Choose English or Arabic and your grade group. The photo-story mode opens first, and its **Previous**, **Places**, and **Next place** controls let you travel directly without navigating geometry. Look left or right using the photo controls (when the mission card is closed). Select **Explore 3D** to switch to the optional fictional 3D campus. Select the door markers to move between learning stations. **Safe exit** always returns to the calm welcome space. If a situation feels uncomfortable, skip it without losing points.
+Choose English or Arabic and your grade group. The connected 360° fictional 3D campus opens first. Select **Start walking in 360°**, then use the green arrow buttons or keyboard arrows/WASD to walk in any direction. Use the gold curved arrows (Q/R), drag the scene with the mouse or finger, or use Page Up/Page Down to look around; the centre button resets the view. **Previous**, **Places**, and **Next place** let you travel directly. Select any door marker or photo board to open its mission. **Photo view** is an optional alternative. **Safe exit** always returns to the calm welcome space. If a situation feels uncomfortable, skip it without losing points.
+
+Every new page load starts with 0/8 completed missions; no previous learner's progress or answers are loaded. Use **New learner** to explicitly clear the current session without reloading. Progress is not retained after closing/reloading the page. Each mission begins incomplete and is credited only when the learner selects a correct safe response. Repeated answers never increase the total.
 
 Listen to Murshid's prerecorded chapter or choose the read-aloud option for the question and choices. The latter uses compatible device speech voices. Narration chapters are included in the archive, and the updated package uses remastered sound with consistent loudness and slightly slower playback. New voice generation was unavailable because the available speech allowance was exhausted; the original two synthetic narrator voices remain in use.
 
-Complete eight safe-choice missions. A gold award notification appears when all eight are complete. Select **Claim award**, **Finish journey**, or **Certificate** to enter a chosen local display name and download the print-ready A4-ratio PNG or open the print view. No real name or personal experience is required, and no names are transmitted.
+Complete eight safe-choice missions. The eighth successful unique mission automatically opens the personalized gold award page. Enter a chosen local display name and download the print-ready A4-ratio PNG or open the print view. No real name or personal experience is required, and no names are transmitted. Skipped and incorrect answers do not unlock the certificate.
 
 ## Visual provenance and privacy
 

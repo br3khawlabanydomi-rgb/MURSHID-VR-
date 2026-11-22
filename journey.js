@@ -4,7 +4,7 @@ const photo=document.createElement('section');photo.id='photo-stage';photo.setAt
 const route=document.createElement('div');route.id='routebar';route.innerHTML='<button id="prevstop">←</button><div class="counter" id="stopcounter"></div><button id="openroute">☷</button><button id="nextstop" class="primary">→</button>';document.body.append(route);
 const ctrl=document.createElement('div');ctrl.id='photocontrol';ctrl.innerHTML='<button id="photo-pan-left" aria-label="Look left">◀</button><button id="photo-pan-right" aria-label="Look right">▶</button><button id="modeview">3D</button><button id="showmission">✦</button><button id="hearagain">♪ Murshid</button>';document.body.append(ctrl);
 const caption=document.createElement('div');caption.id='scene-caption';document.body.append(caption);
-let photoMode=true,pan=50;
+let photoMode=false,pan=50;
 document.querySelector('.brand').innerHTML='<img class="brand-logo" src="assets/ics-logo.webp" alt="ICS logo"><div><strong>MURSHID VR | مرشد</strong><small>ICS Khalifa City · Branch 3</small></div>';
 document.title='MURSHID VR | The Journey Beyond Bullying';
 function viewMode(on){photoMode=on;document.body.classList.toggle('photo-mode',on);photo.hidden=!on;$('modeview').textContent=on?tr('Explore 3D','استكشف ثلاثي الأبعاد'):tr('Photo story','القصة المصورة');if(!on&&window.AFRAME)$('scene').resize?.()}
@@ -28,4 +28,4 @@ $('scene')?.addEventListener('enter-vr',()=>{viewMode(false)});$('scene')?.addEv
 // Use photographic story panels in the optional symbolic 3D campus instead of cartoon pupils.
 function photoBoards(){if(!window.AFRAME||!$('world'))return;const root=$('world');if(root.querySelector('.story-photo'))return;root.querySelectorAll('a-entity.interactive').forEach(e=>e.setAttribute('visible',false));centers.forEach(([x,z],i)=>{const b=entity('a-plane',{position:`${x} 1.65 ${z-3.35}`,width:4.5,height:2.53,src:imagePath(i),material:'shader: flat; side: double',class:'story-photo interactive'});b.addEventListener('click',()=>go(i))})}
 if(window.AFRAME){const originalBuild=build;build=function(){originalBuild();photoBoards()};if($('scene').hasLoaded)photoBoards();else $('scene').addEventListener('loaded',photoBoards,{once:true})}
-viewMode(true);hud();home();
+viewMode(false);hud();home();

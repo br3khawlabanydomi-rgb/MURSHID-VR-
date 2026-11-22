@@ -1,7 +1,8 @@
 const $=id=>document.getElementById(id), t=p=>p[lang], L=k=>t(labels[k]);
 let lang=0,world=0,grade='1–3',role=0,sound=true,done=new Set(),skipped=new Set(),pre=null,post=null,mode='guided',paused=false,quizState=null,feedback='',panelType='home';
-try{const s=JSON.parse(localStorage.getItem('beyond-v1')||'{}');done=new Set(s.done||[]);skipped=new Set(s.skipped||[]);pre=s.pre??null;post=s.post??null;grade=s.grade||grade;lang=s.lang===1?1:0}catch(e){}
-const save=()=>{try{localStorage.setItem('beyond-v1',JSON.stringify({done:[...done],skipped:[...skipped],pre,post,grade,lang}))}catch(e){}};
+// Learner progress belongs exclusively to the current page session. Never restore a previous learner's answers.
+try{const s=JSON.parse(localStorage.getItem('murshid-preferences-v4')||'{}');grade=['1–3','4–6','7–10'].includes(s.grade)?s.grade:grade;lang=s.lang===1?1:0}catch(e){}
+const save=()=>{try{localStorage.setItem('murshid-preferences-v4',JSON.stringify({grade,lang}))}catch(e){}};
 const tr=(a,b)=>lang?b:a;const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function speak(text){if(!sound||!('speechSynthesis'in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang=lang?'ar-AE':'en-GB';u.rate=.86;const voices=speechSynthesis.getVoices();const v=voices.find(x=>x.lang.toLowerCase().startsWith(lang?'ar':'en'));if(v)u.voice=v;speechSynthesis.speak(u)}
 function button(label,action,cls=''){return `<button class="${cls}" data-action="${action}">${esc(label)}</button>`}
