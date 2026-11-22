@@ -1,7 +1,7 @@
 # Beyond Bullying — AI-Powered VR
 
 International Community Schools • Khalifa City — Branch 3  
-Designed by Ms. Khawla Banydomi, AI Lead • Academic Year 2026–2027
+Designed by Khawla Banydomi, AI Instructor • Academic Year 2026–2027
 
 ## Publish with GitHub Pages
 
